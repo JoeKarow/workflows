@@ -1,6 +1,6 @@
 {
   "extends": ["github>JoeKarow/renovate-config"],
   "github-actions": {
-    "fileMatch": ["*.yml"]
+    "fileMatch": [".ya?ml"]
   }
 }
