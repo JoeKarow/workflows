@@ -1,4 +1,0 @@
-{
-  "name": "Sync branch",
-  "description": "Does a FF merge from one branch to another - useful for keeping develop branch up to date with main."
-}
