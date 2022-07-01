@@ -1,0 +1,12 @@
+name: Generate Website Screencap GIF
+on:
+  workflow_dispatch:
+
+jobs:
+  call_workflow:
+    uses: joekarow/workflows/screenshot/workflow.yml@main
+    with:
+      url: "https://" # Site URL
+      # save_path: '/docs/img/' # Path where file is saved, must end with /
+      # gif_name: 'screenshot' # file name, no extension
+    secrets: inherit
