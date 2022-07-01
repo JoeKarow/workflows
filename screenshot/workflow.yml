@@ -30,7 +30,7 @@ jobs:
         with:
           url: ${{ inputs.url }}
           save_path: ${{ inputs.save_path }}
-          gif_name: ${{ inputs gif_name }}
+          gif_name: ${{ inputs.gif_name }}
       - name: Get current date & time
         uses: josStorer/get-current-time@v2
         id: current-time
