@@ -1,0 +1,4 @@
+{
+  "name": "Generate Website Screencap GIF",
+  "description": "Generates an animated GIF screencap of a website and creates a PR with the file."
+}

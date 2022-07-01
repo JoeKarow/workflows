@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   call_workflow:
-    uses: joekarow/workflows/sync-branch/workflow.yml@main
+    uses: joekarow/workflows/.github/workflows/sync-branch.yml@main
     with:
       target_branch: develop
     secrets: inherit # requires GH_PAT to be set in repo

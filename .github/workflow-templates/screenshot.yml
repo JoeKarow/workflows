@@ -4,7 +4,7 @@ on:
 
 jobs:
   call_workflow:
-    uses: joekarow/workflows/screenshot/workflow.yml@main
+    uses: joekarow/workflows/.github/workflows/screenshot.yml@main
     with:
       url: "https://" # Site URL
       # save_path: '/docs/img/' # Path where file is saved, must end with /
