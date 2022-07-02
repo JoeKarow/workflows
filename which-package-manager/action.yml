@@ -1,0 +1,10 @@
+name: node.js package manager identifier
+description: Identifies which node packagemanager is in use for a given repo
+
+outputs:
+  package_manager:
+    description: Package manager in use
+
+runs:
+  using: node16
+  main: "index.js"
