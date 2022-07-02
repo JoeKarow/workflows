@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         if: ${{ success() }}
-        uses: jaid/action-npm-install@v1.2.1
+        uses: jaid/action-npm-install@v1.2.4
       # - name: Prettier
       #   uses: creyD/prettier_action@v4.2
       #   with:
