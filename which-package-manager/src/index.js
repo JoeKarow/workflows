@@ -13,5 +13,6 @@ try {
     );
   });
 } catch (error) {
+  core.error(error.message);
   core.setFailed(error.message);
 }
