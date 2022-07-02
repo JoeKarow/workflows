@@ -1,25 +1,26 @@
-name: Run ESLint
+name: Run Linter
 on:
   pull_request:
   push:
 
 jobs:
-  eslint:
-    name: Run ESLint
+  lint:
+    name: Run Linter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-      - name: Read .nvmrc
-        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
-        id: nvm
-      - name: Install Node.js
+      - name: Identify package manager
+        id: pkgman
+        uses: joekarow/workflows/which-package-manager@main
+      - name: Setup node env
+        if: ${{ success() }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
         id: pnpm-install
         with:
@@ -37,11 +38,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
-        run: pnpm install
+        if: ${{ success() }}
+        uses: jaid/action-npm-install@v1.2.1
       # - name: Prettier
       #   uses: creyD/prettier_action@v4.2
       #   with:
       #     prettier_options: --ignore-unknown
       #     only_changed: true
-      - name: ESLint
-        run: pnpx turbo run lint
+      - name: Run lint step
+        if: ${{ success() }}
+        run: ${{ steps.pkgman.outputs.package_manager}} run lint
