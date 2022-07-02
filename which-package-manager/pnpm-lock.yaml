@@ -3,10 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   '@actions/core': ^1.9.0
   '@vercel/ncc': ^0.34.0
+  ansi-styles: ^6.1.0
   detect-package-manager: ^2.0.1
 
 dependencies:
   '@actions/core': 1.9.0
+  ansi-styles: 6.1.0
   detect-package-manager: 2.0.1
 
 devDependencies:
@@ -30,6 +32,11 @@ packages:
     resolution: {integrity: sha512-G9h5ZLBJ/V57Ou9vz5hI8pda/YQX5HQszCs3AmIus3XzsmRn/0Ptic5otD3xVST8QLKk7AMk7AqpsyQGN7MZ9A==}
     hasBin: true
     dev: true
+
+  /ansi-styles/6.1.0:
+    resolution: {integrity: sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
