@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: connor-baer/action-sync-branch@main
         with:
           branch: ${{ inputs.target_branch }}
