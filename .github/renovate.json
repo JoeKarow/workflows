@@ -1,6 +1,10 @@
 {
-  "extends": ["github>JoeKarow/renovate-config"],
+  "extends": [
+    "github>JoeKarow/renovate-config"
+  ],
   "github-actions": {
-    "fileMatch": [".ya?ml"]
+    "managerFilePatterns": [
+      "/.ya?ml/"
+    ]
   }
 }
